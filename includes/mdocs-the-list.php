@@ -183,16 +183,15 @@ function mdocs_the_list($att=null, $refresh=false) {
 		{
 		  $page = 1;
 
-		 while($page<=$total_pages){
-			if($page == 1){
+		 while($page < $total_pages){
+			if($page === 1){
 				$pager .= sprintf( '<a href="' . $link . '" style="color: #fff; background: #000; padding: 5px 10px;border: 1px solid #fff;">'. $page .'</a>', $page ); 
 	
-			  }
-				$numb = $page + 1;
-				$pager .= sprintf( '<a href="' . $link . '" style="color: #fff; background: #000; padding: 5px 10px; border: 1px solid #fff;">'. $numb .'</a>', $page + 1 ); 
-				$page ++;
 			}
-			     
+			$numb = $page + 1;
+			$pager .= sprintf( '<a href="' . $link . '" style="color: #fff; background: #000; padding: 5px 10px; border: 1px solid #fff;">'. $numb .'</a>', $page + 1 ); 
+			$page ++;
+		}
 		}                   
 		$pager .= '</div>';
 	
